@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+.gradienttext {
+    background-image: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
 
 :root{
     --white: #f9f9f9;
@@ -65,9 +71,10 @@ header {
 
 .logo {
     display: inline-block;
-    color: var(--white);
-    font-size: 60px;
-    margin-left: 10px;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    max-width: 4em;
 }
 
 nav {
@@ -93,7 +100,7 @@ nav {
 .hamb {
     cursor: pointer;
     float: right;
-    padding: 40px 20px;
+    padding: 3em 1em;
 }
 
 .hamb-line {
@@ -143,6 +150,8 @@ nav {
     top:0;
 }
 
+
+
 @media(min-width: 768px){
     nav {
         max-height: none;
@@ -190,7 +199,7 @@ nav {
 }
 
 
-@media only screen and (min-width: 960px){
+@media only screen and (min-width: 1024px){
     .image {
         object-fit: contain;
         float: right;
@@ -222,6 +231,10 @@ nav {
 }
 
 
-
+@media print {
+    header {
+        display: none;
+    }
+}
 
 
