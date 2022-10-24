@@ -60,6 +60,7 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 1100;
 }
 
 .logo {
@@ -174,24 +175,26 @@ nav {
 }
 
 @media only screen and (min-width: 768px) {
-    img {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 315px;
+    article {
+        display: flex;
+        flex-direction: row-reverse;
     }
-
+    .image {
+        object-fit: contain;
+        float: right;
+        width: 40%;
+    }
     .infos {
-        margin-right: 335px;
+        width: 60%;
     }
 }
 
 
 @media only screen and (min-width: 960px){
-    image {
-        width: 35%;
-        position: static;
+    .image {
+        object-fit: contain;
         float: right;
+        width: 50%;
     }
 
     article {
@@ -201,13 +204,21 @@ nav {
     .infos {
         float: left;
         width: 65%;
+        margin-right: 0;
+        flex-direction: row;
     }
 
-    article::after {
-        clear: both;
-        display: block;
-        content: "";
+    .text {
+        width: 60%;
+        padding-right: 30px;
+        float: left;
     }
+
+    .list {
+        width: 40%;
+        float: right;
+    }
+
 }
 
 
